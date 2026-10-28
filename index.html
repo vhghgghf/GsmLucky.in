@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mobile service reseller portal starter template">
+  <title>Rudra Mobile Services — Reseller Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">R</span><span>Rudra<span class="muted">Services</span><small>RESELLER PORTAL</small></span></a>
+    <nav><a href="#services" data-en="Services" data-hi="सेवाएँ">Services</a><a href="#orders" data-en="My Orders" data-hi="मेरे ऑर्डर">My Orders</a><a href="#help" data-en="Support" data-hi="सहायता">Support</a></nav>
+    <div class="top-actions"><button id="langToggle" class="btn btn-ghost">हिंदी</button><button id="loginOpen" class="btn btn-primary" data-en="Login" data-hi="लॉगिन">Login</button></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow" data-en="MOBILE SERVICE PARTNER PORTAL" data-hi="मोबाइल सर्विस पार्टनर पोर्टल">MOBILE SERVICE PARTNER PORTAL</span>
+        <h1 data-en="Your mobile service business, in one place." data-hi="आपका मोबाइल सर्विस व्यवसाय, एक ही जगह।">Your mobile service business, in one place.</h1>
+        <p data-en="Browse service listings, track demo orders, and manage your reseller account from a clean dashboard." data-hi="सेवाएँ देखें, डेमो ऑर्डर ट्रैक करें और एक सरल डैशबोर्ड से अपना रीसेलर अकाउंट संभालें।">Browse service listings, track demo orders, and manage your reseller account from a clean dashboard.</p>
+        <div class="hero-buttons"><a class="btn btn-primary" href="#services" data-en="Explore Services" data-hi="सेवाएँ देखें">Explore Services</a><button id="registerOpen" class="btn btn-light" data-en="Create Account" data-hi="अकाउंट बनाएँ">Create Account</button></div>
+        <p class="notice" data-en="Starter demo only — no real credits, payments, or device unlocking is performed." data-hi="यह केवल शुरुआती डेमो है — असली क्रेडिट, भुगतान या डिवाइस अनलॉकिंग नहीं होती।">Starter demo only — no real credits, payments, or device unlocking is performed.</p>
+      </div>
+      <div class="hero-card">
+        <div class="card-top"><span class="live-dot"></span><span data-en="ACCOUNT OVERVIEW" data-hi="अकाउंट सारांश">ACCOUNT OVERVIEW</span><span class="pill">DEMO</span></div>
+        <p class="label" data-en="Demo wallet balance" data-hi="डेमो वॉलेट बैलेंस">Demo wallet balance</p>
+        <div class="balance">₹ <span id="balance">0.00</span></div>
+        <div class="balance-sub" data-en="Sample balance · not redeemable" data-hi="नमूना बैलेंस · निकाला नहीं जा सकता">Sample balance · not redeemable</div>
+        <div class="mini-stats"><div><span id="orderCount">0</span><small data-en="Demo orders" data-hi="डेमो ऑर्डर">Demo orders</small></div><div><span id="serviceCount">4</span><small data-en="Listed services" data-hi="सूचीबद्ध सेवाएँ">Listed services</small></div></div>
+        <div class="card-foot"><span>●</span><span data-en="Local preview mode" data-hi="लोकल प्रीव्यू मोड">Local preview mode</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-heading"><div><span class="eyebrow" data-en="SERVICE CATALOG" data-hi="सेवा सूची">SERVICE CATALOG</span><h2 data-en="Choose a service" data-hi="सेवा चुनें">Choose a service</h2><p data-en="Illustrative listings; connect an authorized provider before taking real orders." data-hi="ये उदाहरण हैं; असली ऑर्डर लेने से पहले अधिकृत सेवा प्रदाता जोड़ें।">Illustrative listings; connect an authorized provider before taking real orders.</p></div><div class="search-wrap"><span>⌕</span><input id="serviceSearch" placeholder="Search services…" data-en-placeholder="Search services…" data-hi-placeholder="सेवाएँ खोजें…"></div></div>
+      <div class="service-grid" id="serviceGrid"></div>
+    </section>
+
+    <section class="section orders-section" id="orders">
+      <div class="section-heading"><div><span class="eyebrow" data-en="ACTIVITY" data-hi="गतिविधि">ACTIVITY</span><h2 data-en="Recent demo orders" data-hi="हाल के डेमो ऑर्डर">Recent demo orders</h2><p data-en="Orders are stored in this browser only." data-hi="ऑर्डर केवल इसी ब्राउज़र में सेव होते हैं।">Orders are stored in this browser only.</p></div><button id="clearOrders" class="btn btn-ghost" data-en="Clear demo data" data-hi="डेमो डेटा हटाएँ">Clear demo data</button></div>
+      <div class="table-wrap"><table><thead><tr><th data-en="Order ID" data-hi="ऑर्डर आईडी">Order ID</th><th data-en="Service" data-hi="सेवा">Service</th><th data-en="Date" data-hi="तारीख">Date</th><th data-en="Amount" data-hi="राशि">Amount</th><th data-en="Status" data-hi="स्थिति">Status</th></tr></thead><tbody id="ordersBody"><tr><td colspan="5" class="empty" data-en="No demo orders yet. Choose a service above." data-hi="अभी कोई डेमो ऑर्डर नहीं है। ऊपर से सेवा चुनें।">No demo orders yet. Choose a service above.</td></tr></tbody></table></div>
+    </section>
+
+    <section class="support" id="help"><div><span class="eyebrow" data-en="NEED HELP?" data-hi="मदद चाहिए?">NEED HELP?</span><h2 data-en="Build trust into every order." data-hi="हर ऑर्डर में भरोसा बनाएँ।">Build trust into every order.</h2><p data-en="Add your verified support email, WhatsApp business number, refund terms, and service-level policies before launch." data-hi="लॉन्च से पहले सत्यापित सपोर्ट ईमेल, WhatsApp Business नंबर, रिफंड नियम और सेवा शर्तें जोड़ें।">Add your verified support email, WhatsApp business number, refund terms, and service-level policies before launch.</p></div><a class="btn btn-light" href="mailto:support@example.com" data-en="Email support (demo)" data-hi="ईमेल सहायता (डेमो)">Email support (demo)</a></section>
+  </main>
+  <footer><span>© <span id="year"></span> Rudra Services · Starter template</span><span data-en="Use only authorized, lawful services." data-hi="केवल अधिकृत और वैध सेवाएँ उपयोग करें।">Use only authorized, lawful services.</span></footer>
+
+  <dialog id="accountDialog"><form method="dialog" id="accountForm"><div class="dialog-head"><div><span class="eyebrow" id="dialogEyebrow">ACCOUNT</span><h2 id="dialogTitle">Login</h2></div><button class="close" aria-label="Close">×</button></div><p class="dialog-note" data-en="Demo form only. It does not create a secure account or send data to a server." data-hi="केवल डेमो फ़ॉर्म। यह सुरक्षित अकाउंट नहीं बनाता और डेटा सर्वर पर नहीं भेजता।">Demo form only. It does not create a secure account or send data to a server.</p><label for="userName" data-en="Name" data-hi="नाम">Name</label><input id="userName" autocomplete="name" placeholder="Your name"><label for="userEmail">Email</label><input id="userEmail" type="email" autocomplete="email" placeholder="you@example.com" required><label for="userPassword" data-en="Password (demo only)" data-hi="पासवर्ड (केवल डेमो)">Password (demo only)</label><input id="userPassword" type="password" minlength="6" placeholder="At least 6 characters" required><p id="formMessage" class="form-message"></p><button class="btn btn-primary full" id="accountSubmit" type="submit">Continue</button></form></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
